@@ -56,6 +56,8 @@ export const App = () => {
         message: newMessage
       })
     }
+    // https://project-happy-thoughts-api-7irwn4hbpa-lz.a.run.app/thoughts
+    // https://happy-thoughts-ux7hkzgmwa-uc.a.run.app/thoughts
 
     fetch('https://project-happy-thoughts-api-7irwn4hbpa-lz.a.run.app/thoughts', options)
       .then((res) => res.json())
@@ -69,7 +71,8 @@ export const App = () => {
         'Content-Type': 'application/json'
       } }
 
-    fetch(`https://project-happy-thoughts-api-7irwn4hbpa-lz.a.run.app/thoughts/${LikeID}/like`, options)
+    // https://project-happy-thoughts-api-7irwn4hbpa-lz.a.run.app/thoughts/${LikeID}/like
+    fetch(`https://happy-thoughts-ux7hkzgmwa-uc.a.run.app/thoughts/${LikeID}/like`, options)
       .then((res) => res.json())
       .then(console.log('xxx'))
       .catch((error) => console.error(error))
