@@ -9,7 +9,7 @@ export const App = () => {
   const [loading, setLoading] = useState(false); // Here a boolean value indicates that/whether
   // the API call is active.
   const [newMessage, setNewMessage] = useState(''); // This is a variable that stores the value
-  // of/message put in the component called NewThoughts.
+  // of the message put in the component called NewThoughts.
 
   // Below: A function. handleNewThoughtsChange = a function that updates the newMessage state
   // variable when the user types in text area.
@@ -65,6 +65,20 @@ export const App = () => {
       .finally(() => setNewMessage(''));
   }
 
+  //     fetch('https://technigo-thoughts.herokuapp.com/', {
+  //     method: 'POST',
+  //     body: JSON.stringify({
+  //     message: 'Hello world' })
+  //   })
+  //     .then((res) => res.json())
+  //     .then((newThought) => {
+  //       // Now you have `newThought` which is the response from the
+  //       // API as documented at the top of this readme. You can use
+  //       // it to update the `thoughts` array:
+  //       setThoughts((previousThoughts) => [newThought, ...previousThoughts])
+  //     })
+  // }
+
   const onLikesIncrease = (LikeID) => {
     const options = { method: 'PATCH',
       headers: {
@@ -95,17 +109,3 @@ export const App = () => {
     </div>
   )
 };
-
-//     fetch('https://technigo-thoughts.herokuapp.com/', {
-//     method: 'POST',
-//     body: JSON.stringify({
-//     message: 'Hello world' })
-//   })
-//     .then((res) => res.json())
-//     .then((newThought) => {
-//       // Now you have `newThought` which is the response from the
-//       // API as documented at the top of this readme. You can use
-//       // it to update the `thoughts` array:
-//       setThoughts((previousThoughts) => [newThought, ...previousThoughts])
-//     })
-// }
