@@ -1,6 +1,7 @@
 import React from 'react';
 
 const NewThoughts = ({ newMessage, handleNewThoughtsChange, onFormSubmit }) => {
+  console.log(newMessage, handleNewThoughtsChange, onFormSubmit)
   // Above: newMessage = a state passed in as a prop (to component)
   const handleInputChange = (event) => {
     // const input = event.target.value;
@@ -17,7 +18,7 @@ const NewThoughts = ({ newMessage, handleNewThoughtsChange, onFormSubmit }) => {
         value={newMessage}
         onChange={handleInputChange} />
       <div className="main">
-        <button className="submit-btn" type="submit">
+        <button className="submit-btn" type="submit" onClick={() => NewThoughts()}>
           ❤️Send a Happy Thought❤️
         </button>
       </div>
