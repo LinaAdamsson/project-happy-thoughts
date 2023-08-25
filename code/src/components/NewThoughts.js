@@ -1,10 +1,11 @@
+/* eslint-disable no-underscore-dangle */
 import React from 'react';
 
-const NewThoughts = ({ newMessage, handleNewThoughtsChange, onFormSubmit }) => {
+export const NewThoughts = ({ newMessage, handleNewThoughtsChange, onFormSubmit }) => {
   console.log(newMessage, handleNewThoughtsChange, onFormSubmit)
   // Above: newMessage = a state passed in as a prop (to component)
   const handleInputChange = (event) => {
-    // const input = event.target.value;
+  //   const input = event.target.value;
     handleNewThoughtsChange(event);
   };
   // Above: handleNewThoughtsChange = Function called when writing message in text field
@@ -25,5 +26,3 @@ const NewThoughts = ({ newMessage, handleNewThoughtsChange, onFormSubmit }) => {
     </form>
   );
 };
-
-export default NewThoughts

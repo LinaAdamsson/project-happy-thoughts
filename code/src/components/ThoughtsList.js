@@ -2,7 +2,7 @@
 import React from 'react';
 import { formatDistance } from 'date-fns';
 
-const ThoughtsList = ({ loading, thoughts, onLikesIncrease }) => {
+export const ThoughtsList = ({ loading, thoughts, onLikesIncrease }) => {
   if (loading) {
     return <div className="Loading">Loading</div>
   }
@@ -26,5 +26,3 @@ const ThoughtsList = ({ loading, thoughts, onLikesIncrease }) => {
     </section>
   );
 }
-
-export default ThoughtsList
