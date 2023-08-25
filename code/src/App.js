@@ -1,7 +1,10 @@
+/* eslint-disable max-len */
+/* eslint-disable spaced-comment */
+/* eslint-disable no-trailing-spaces */
 import React, { useEffect, useState } from 'react';
 import Header from 'components/Header';
-import NewThoughts from 'components/NewThoughts';
-import ThoughtsList from 'components/ThoughtsList';
+import { NewThoughts } from 'components/NewThoughts';
+import { ThoughtsList } from 'components/ThoughtsList';
 
 export const App = () => {
   const [thoughts, setThoughts] = useState([]); // Here an array of objects is stored inside
