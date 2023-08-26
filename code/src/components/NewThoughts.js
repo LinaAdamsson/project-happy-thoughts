@@ -9,7 +9,7 @@ export const NewThoughts = ({ newMessage, handleNewThoughtsChange, onFormSubmit 
     handleNewThoughtsChange(event);
   };
   // Above: handleNewThoughtsChange = Function called when writing message in text field
-
+  // onChange(event => setMessage(event.target.value))
   // Below: onFormSubmit when user submits the form.
   return (
     <form className="message-container" onSubmit={onFormSubmit}>

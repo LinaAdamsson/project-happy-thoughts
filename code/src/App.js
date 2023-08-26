@@ -88,7 +88,6 @@ export const App = () => {
         'Content-Type': 'application/json'
       } }
 
-    // https://project-happy-thoughts-api-7irwn4hbpa-lz.a.run.app/thoughts/${LikeID}/like
     fetch(`https://happy-thoughts-ux7hkzgmwa-uc.a.run.app/thoughts/${LikeID}/like`, options)
       .then((res) => res.json())
       .then(console.log('xxx'))
