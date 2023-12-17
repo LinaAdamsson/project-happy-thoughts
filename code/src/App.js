@@ -3,8 +3,8 @@
 /* eslint-disable no-trailing-spaces */
 import React, { useEffect, useState } from 'react';
 import Header from 'components/Header';
-import { NewThoughts } from 'components/NewThoughts';
-import { ThoughtsList } from 'components/ThoughtsList';
+import NewThoughts from 'components/NewThoughts';
+import ThoughtsList from 'components/ThoughtsList';
 
 export const App = () => {
   const [thoughts, setThoughts] = useState([]); // Here an array of objects is stored inside
@@ -13,12 +13,13 @@ export const App = () => {
   // the API call is active.
   const [newMessage, setNewMessage] = useState(''); // This is a variable that stores the value
   // of the message put in the component called NewThoughts.
-
+console.log("---------------------", newMessage)
   // Below: A function. handleNewThoughtsChange = a function that updates the newMessage state
   // variable when the user types in text area.
 
   const handleNewThoughtsChange = (event) => {
     setNewMessage(event.target.value)
+    console.log("xxxxxxxxxxxxxxxxxx")
   }
 
   // Below: A function. fetchThoughts = a function that makes a GET request to the API to fetch
@@ -47,6 +48,7 @@ export const App = () => {
 
   const onFormSubmit = (event) => {
     event.preventDefault();
+    console.log('Form submitted with message:', newMessage);
 
     // Below: Send the POST request with the input from your form
 
